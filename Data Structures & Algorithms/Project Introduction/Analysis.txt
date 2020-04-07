@@ -1,0 +1,34 @@
+- Run time analysis (Worst-Case Big-O Notation)
+
+1. Task0
+    
+    In this solution, the code begins with the function first_record_texts, which has an O(1) complexity. 
+And then, goes to the second function, last_record_calls, also with O(1) complexity. So, O(1) in total.
+
+2. Task1
+
+    In this solution, the code begins with the function different_numbers_texts_calls, which has a function 
+inside called get_tuples_data, to get which data is higher, O(1), and a loop internally to go through the 
+highest data (texts.csv), so, an O(n) complexity, but calling the function add_value_numbers with O(2n) every 
+time to each position on the list, and goes to O(2n^2) in total.
+
+3. Task2
+
+    In this solution, the code begins with the function telephone_longest_time, which has a loop inside going
+through each element of the list (calls.csv), then an O(n) complexity, and calling the function add_duration_numbers
+that has O(2n). And finally a last loop for selected elements, with O(n). Then, it's O(2n^2 + n) in total.
+
+4. Task3
+
+    In this solution, the code begins with the part A, the function area_codes_prefixes_bangalore, which has a 
+intern loop, O(n), calling the function verify_add_prefix and verify_add_area, both with O(n) complexity. Then 
+a final sorting list (O(n^2)) and another loop, resulting in a total time complexity of O(3n^2 + n). In addition, 
+with the part B, the function percentage_bangalore_to_bangalore, which has a loop (O(n)) and calling internally 
+the function is_bangalore, with O(1) complexity. So that's still O(n).   
+
+5. Task4
+
+    In this solution, the code begins with the function telemarketers_number, which has the function get_tuples_data,
+with O(1) complexity, and a loop that goes to the highest index of the list (texts.csv), and calls the functions 
+verify_telemarketer (O(2n)), twice wether the both data are available to access. Then another loop with selected 
+elements (O(n)) and a sorting process (O(n^2)), getting a time complexity of O(3n^2 + n) in total.

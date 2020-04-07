@@ -19,7 +19,7 @@ def first_record_texts(texts):
 def last_record_calls(calls):
     """Create a message of the last record call.
     INPUT:
-    calls: Strings list. The incoming number, answering number, timestamp, and duration of the messages.
+    calls: Strings list. The incoming number, answering number, timestamp, and duration of the calls.
     OUTPUT: 
     msg: The last record call message.
     """
@@ -31,7 +31,6 @@ import csv
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
-
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)

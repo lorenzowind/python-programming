@@ -1,4 +1,4 @@
-class DoubleNode:
+class DoubleNode(object):
     
     def __init__(self, key, value):
         self.key = key
@@ -9,7 +9,7 @@ class DoubleNode:
     def set_value(self, value):
         self.value = value
 
-class DoublyLinkedList:
+class DoublyLinkedList(object):
 
     def __init__(self):
         self.head = None
@@ -68,7 +68,7 @@ class DoublyLinkedList:
         self.tail = self.tail.previous
         self.tail.next = None
 
-class HashMap:
+class HashMap(object):
 
     def __init__(self):
         self.bucket_array = {}
@@ -137,13 +137,13 @@ print(edge_cache_1.get(10**10000 + 1)) # returns 2
 edge_cache_2 = LRU_Cache(5)
 
 edge_cache_2.set('', 1)
-print(edge_cache_2.get('')) # return -1 because this key is not valid
+print(edge_cache_2.get('')) # returns -1 because this key is not valid
 
 edge_cache_2.set(None, 1)
-print(edge_cache_2.get(None)) # return -1 because this key is not valid
+print(edge_cache_2.get(None)) # returns -1 because this key is not valid
 
 edge_cache_2.set(1, '')
-print(edge_cache_2.get(1)) # return -1 because this value is not valid
+print(edge_cache_2.get(1)) # returns -1 because this value is not valid
 
 edge_cache_2.set(1, None)
-print(edge_cache_2.get(1)) # return -1 because this value is not valid
+print(edge_cache_2.get(1)) # returns -1 because this value is not valid

@@ -25,6 +25,9 @@ def find_files(suffix, path):
     Returns:
        a list of paths
     """
+    if suffix == '' or suffix is None:
+        return "Invalid arguments"
+
     paths = []
 
     find_files_recursive(suffix, path, 0, paths)
@@ -33,4 +36,19 @@ def find_files(suffix, path):
 
 os.chdir(os.path.join(os.path.dirname(__file__), 'testdir'))
 
-print(find_files('.c', os.listdir())) # returns all file paths ending with '.c' in the testdir folder
+# Test case 1
+
+print(find_files('.c', os.listdir()), '\n') # returns all file paths ending with '.c' in the testdir folder
+
+# Test case 2
+
+print(find_files('.h', os.listdir()), '\n') # returns all file paths ending with '.h' in the testdir folder
+
+# Test case 3
+
+print(find_files('.gitkeep', os.listdir()), '\n') # returns all file paths ending with '.gitkeep' in the testdir folder
+
+# Test case 4 - edge case
+
+print(find_files('', os.listdir()), '\n') # returns a message of invalid arguments
+print(find_files(None, os.listdir()), '\n') # returns a message of invalid arguments

@@ -1,5 +1,9 @@
 class Group(object):
+
     def __init__(self, _name):
+        if _name == "" or _name == None:
+            return None
+
         self.name = _name
         self.groups = []
         self.users = []
@@ -8,6 +12,9 @@ class Group(object):
         self.groups.append(group)
 
     def add_user(self, user):
+        if user == "" or user == None:
+            return None
+
         self.users.append(user)
 
     def get_groups(self):
@@ -32,18 +39,24 @@ def find_group(user, group):
     if len(group.users) != 0:
         if find_user(user, group, 0):
             return True
+
     if len(group.groups) != 0:
         for index in range(len(group.groups)):
             if find_group(user, group.groups[index]):
                 return True
+
     return False
 
 def find_user(user, group, index):
     if index == len(group.users):
         return False
+
     elif group.users[index] == user:
         return True
+
     return find_user(user, group, index + 1)
+
+# Test case 1
 
 parent = Group("parent")
 child = Group("child")
@@ -56,6 +69,8 @@ child.add_group(sub_child)
 parent.add_group(child)
 
 print(is_user_in_group("sub_child_user", parent)) # returns True
+
+# Test case 2
 
 group_01 = Group("group 01")
 group_01.add_user("user 01")
@@ -114,3 +129,19 @@ print(is_user_in_group("user 09", group_05)) # returns True
 
 print(is_user_in_group("user 05", group_06)) # returns False
 print(is_user_in_group("user 14", group_06)) # returns True
+
+# Test case 3 - edge case
+
+try:
+    group = Group("")
+    group.add_user("")
+    print(is_user_in_group("", group))
+
+except AttributeError: print("Invalid arguments")
+
+try:
+    group = Group(None)
+    group.add_user(None)
+    print(is_user_in_group(None, group))
+    
+except AttributeError: print("Invalid arguments")

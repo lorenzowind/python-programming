@@ -42,7 +42,7 @@ def huffman_encoding(data):
     return encode_message(data, tree), tree
 
 def huffman_decoding(data,tree):
-    if len(data) == 0 and tree == None:
+    if len(data) == 0 and tree is None:
         return None
 
     return decode_message(data, tree)
@@ -164,7 +164,8 @@ def decode_message(data, tree):
     return message
 
 if __name__ == "__main__":
-    codes = {}
+    
+    # Test case 1
 
     a_great_sentence = "The bird is the word"
 
@@ -182,6 +183,7 @@ if __name__ == "__main__":
         print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data))) # returns 69 because is the decoded string size
         print ("The content of the encoded data is: {}\n".format(decoded_data)) # returns the string content
 
+    # Test case 2 - edge case
 
     edge_sentence_1 = ""
 
@@ -196,6 +198,8 @@ if __name__ == "__main__":
     print ("The content of the data is: {}\n".format(edge_sentence_2)) # returns the string
 
     print(huffman_encoding(edge_sentence_2), "\n") # returns (None, None) because it's not possible to encode a string with only one character
+
+    # Test case 3
 
     edge_sentence_3 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 

@@ -1,0 +1,1 @@
+### To find a specific user in groups, I implemented recursive functions to go through the groups and users array, verifying if the selected user was found. The search takes O(n) plus the number of subgroups.

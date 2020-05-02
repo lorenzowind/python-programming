@@ -1,0 +1,1 @@
+### To find all the files with specific endings in the folder, I implemented a recursive solution, going through the subdirectories and appending the paths in an array. All this process takes O(n) plus the number of elements in each subdirectory.

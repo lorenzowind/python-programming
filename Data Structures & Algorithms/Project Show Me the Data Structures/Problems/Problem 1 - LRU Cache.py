@@ -126,7 +126,7 @@ our_cache.set(6, 6)
 
 print(our_cache.get(3)) # returns -1
 
-# Test case 2 - edge case
+# Test case 2 - edge cases
 
 edge_cache_1 = LRU_Cache(2)
 
@@ -138,7 +138,7 @@ print(edge_cache_1.get(10**10000 + 2)) # returns 3
 print(edge_cache_1.get(10**10000)) # returns -1
 print(edge_cache_1.get(10**10000 + 1)) # returns 2
 
-# Test case 3 - edge case
+# Test case 3 - edge cases
 
 edge_cache_2 = LRU_Cache(5)
 

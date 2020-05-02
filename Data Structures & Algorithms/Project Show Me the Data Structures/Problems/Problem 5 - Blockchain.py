@@ -16,8 +16,7 @@ class Block:
                   self.timestamp, self.data, self.previous_hash
             ).encode('utf-8')
 
-            while not sha.hexdigest().startswith('0000'):
-                  sha.update(hash_str)
+            sha.update(hash_str)
 
             return sha.hexdigest()
 
@@ -74,7 +73,7 @@ blockchain.add_block("Some information")
 
 blockchain.print_blockchain() # returns the blocks information  
 
-# Test case 2
+# Test case 2 - edge case
 
 blockchain_2 = Blockchain()
 
@@ -82,7 +81,7 @@ blockchain_2.add_block("") # the block won't be addded
 
 blockchain_2.print_blockchain() # returns nothing because the block wasn't added
 
-# Test case 3
+# Test case 3 - edge case
 
 blockchain_3 = Blockchain()
 

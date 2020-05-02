@@ -1,0 +1,1 @@
+### To create the LRU Cache, I used a Doubly Linked List - to ensure that I can access the previous and next node - and a Hash Map - to access any element using the key. Implementing these structures together is a way to perform get and set operations on the linked list by accessing any node with the key in O(1).

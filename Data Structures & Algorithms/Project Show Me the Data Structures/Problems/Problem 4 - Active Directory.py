@@ -130,7 +130,7 @@ print(is_user_in_group("user 09", group_05)) # returns True
 print(is_user_in_group("user 05", group_06)) # returns False
 print(is_user_in_group("user 14", group_06)) # returns True
 
-# Test case 3 - edge case
+# Test case 3 - edge cases
 
 try:
     group = Group("")

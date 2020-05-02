@@ -1,0 +1,1 @@
+### To create the blockchain, I used a Linked List to join the blocks - considering the related information of each - and add with an O(1) complexity.

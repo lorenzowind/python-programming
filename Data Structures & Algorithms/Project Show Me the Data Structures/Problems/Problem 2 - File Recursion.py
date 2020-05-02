@@ -48,7 +48,7 @@ print(find_files('.h', os.listdir()), '\n') # returns all file paths ending with
 
 print(find_files('.gitkeep', os.listdir()), '\n') # returns all file paths ending with '.gitkeep' in the testdir folder
 
-# Test case 4 - edge case
+# Test case 4 - edge cases
 
 print(find_files('', os.listdir()), '\n') # returns a message of invalid arguments
 print(find_files(None, os.listdir()), '\n') # returns a message of invalid arguments

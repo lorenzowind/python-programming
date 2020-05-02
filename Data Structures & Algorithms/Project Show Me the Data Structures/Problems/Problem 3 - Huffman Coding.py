@@ -183,7 +183,7 @@ if __name__ == "__main__":
         print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data))) # returns 69 because is the decoded string size
         print ("The content of the encoded data is: {}\n".format(decoded_data)) # returns the string content
 
-    # Test case 2 - edge case
+    # Test case 2 - edge cases
 
     edge_sentence_1 = ""
 

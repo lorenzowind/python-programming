@@ -1,1 +1,1 @@
-### To find a specific user in groups, I implemented recursive functions to go through the groups and users array, verifying if the selected user was found. The search takes O(n) plus the number of subgroups.
+### To find a specific user in groups, I implemented recursive functions to go through the groups and users array, verifying if the selected user was found. The search takes O(n) time complexity plus the number of subgroups. The space complexity is also O(n), the group and user arrays in each group.

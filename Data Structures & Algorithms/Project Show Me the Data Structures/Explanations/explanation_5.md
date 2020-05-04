@@ -1,1 +1,1 @@
-### To create the blockchain, I used a Linked List to join the blocks - considering the related information of each - and add with an O(1) complexity.
+### To create the blockchain, I used a Linked List to join the blocks - considering the related information of each - and add with a time complexity of O(1). The space complexity is O(n), the amount of block in the linked list.

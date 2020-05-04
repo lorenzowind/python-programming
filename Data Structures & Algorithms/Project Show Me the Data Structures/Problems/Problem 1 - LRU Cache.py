@@ -153,3 +153,16 @@ print(edge_cache_2.get(1)) # returns -1 because this value is not valid
 
 edge_cache_2.set(1, None)
 print(edge_cache_2.get(1)) # returns -1 because this value is not valid
+
+# Test case 4 - edge case
+
+try:
+    edge_cache_3 = LRU_Cache(0)
+
+    edge_cache_3.set(1,1)
+    edge_cache_3.set(2,2)
+    edge_cache_3.set(3,3)
+
+    print(edge_cache_3.get(1))
+
+except AttributeError: print("Invalid arguments")

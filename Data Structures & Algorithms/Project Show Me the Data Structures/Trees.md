@@ -169,7 +169,7 @@ def post_order(tree):
     return visit_order
 ```
 
-## Breadth First Search (DFS)
+## Breadth First Search (BFS)
 ### Queue class
 ```python
 from collections import deque

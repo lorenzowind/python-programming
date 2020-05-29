@@ -101,7 +101,7 @@ def quicksort(items):
 
 ## Heapsort
 
-### Implementatin
+### Implementation
 ```python
 # Solution
 

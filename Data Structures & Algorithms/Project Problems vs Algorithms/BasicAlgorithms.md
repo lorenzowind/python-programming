@@ -32,7 +32,7 @@ def binary_search(array, target):
             end_index = mid_index - 1 # we will only search in the left half
         
         else: # the target is greater than mid element
-            start_index = mid_element + 1 # we will search only in the right half
+            start_index = mid_index + 1 # we will search only in the right half
     
     return -1
 

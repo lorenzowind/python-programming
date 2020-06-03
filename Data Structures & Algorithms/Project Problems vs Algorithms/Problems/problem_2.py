@@ -7,8 +7,11 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
-    if type(number) is not int or len(input_list) <= 1:
+    if type(number) is not int or len(input_list) < 1:
         return -1
+
+    if input_list[0] == number:
+        return 0
 
     rotated_point = find_rotated_point(input_list)
 
@@ -81,21 +84,25 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 10])
 
 # Test case 2
 
+test_function([[2], 2])
+
+# Test case 3
+
 test_function([[6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5], 13])
 test_function([[6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5], 2])
 
-# Test case 3
+# Test case 4
 
 test_function([[15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 17])
 test_function([[15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 12])
 
-# Test case 4 - edge cases
+# Test case 5 - edge cases
 
 test_function([[], 1]) # returns a "pass" message because these arguments are validated
 test_function([[], None]) # returns a "pass" message because these arguments are validated
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], None]) # returns a "pass" message because these arguments are validated
 
-# Test case 5 - edge cases
+# Test case 6 - edge cases
 
 test_function([[10**10000 + 2, 10**10000 + 3, 10**10000 + 4, 10**10000, 10**10000 + 1], 10**10000 + 3])
 test_function([[10**10000 + 2, 10**10000 + 3, 10**10000 + 4, 10**10000, 10**10000 + 1], 10**10000 + 1])

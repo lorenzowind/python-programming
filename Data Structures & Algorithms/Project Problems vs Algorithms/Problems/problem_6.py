@@ -59,6 +59,13 @@ random.shuffle(l)
 
 print ("Pass" if ((0, 999999) == get_min_max(l)) else "Fail")
 
+## Test Case of One Integer
+
+l = [i for i in range(1)]  # a list containing 0
+random.shuffle(l)
+
+print ("Pass" if ((0, 0) == get_min_max(l)) else "Fail") 
+
 ## Test Case of Zero Integers - returns a message of invalid argument and fails the test
 
 l = [i for i in range(0)]  # a list containing nothing

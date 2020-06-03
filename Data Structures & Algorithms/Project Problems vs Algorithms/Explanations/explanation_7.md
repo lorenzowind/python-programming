@@ -12,7 +12,9 @@
 
 ### Method `find` (RouteTrie class)
 
-#### Time complexity: O(h)
+#### Time complexity: O(n*m)
+- `n` is the length of each route
+- `m` is the depth of the route
 #### Space complexity: O(1)
 
 ### Method `insert` (RouteTrieNode class)
@@ -27,7 +29,9 @@
 
 ### Method `lookup` (Router class)
 
-#### Time complexity: O(n)
+#### Time complexity: O(n*m)
+- `n` is the length of each route
+- `m` is the depth of the route
 #### Space complexity: O(n)
 
 ### Method `split_path` (Router class)
@@ -37,5 +41,5 @@
 
 ## Overrall
 
-### Time complexity: O(n)
-### Space complexity: O(n)
+### Time complexity: O(n*m)
+### Space complexity: O(n*m)

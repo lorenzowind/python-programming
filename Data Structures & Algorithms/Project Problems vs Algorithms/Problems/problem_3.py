@@ -10,7 +10,9 @@ def rearrange_digits(input_list):
     if len(input_list) <= 1:
         return "Invalid arguments"
 
-    quicksort(input_list)
+    # quicksort(input_list) - option to use if the array has repeated elements
+
+    input_list = count_frequencies(input_list)
 
     return get_highest_sum(input_list)
 
@@ -34,6 +36,14 @@ def get_digits(list_size):
         return list_size // 2 + 1, list_size // 2
     
     return list_size // 2, list_size // 2
+
+def count_frequencies(input_list):
+    frequencies = set()
+    
+    for element in input_list:
+        frequencies.add(element)
+
+    return list(frequencies)
 
 def quicksort(input_list):
     quicksort_recursive_solution(input_list, 0, len(input_list) - 1)

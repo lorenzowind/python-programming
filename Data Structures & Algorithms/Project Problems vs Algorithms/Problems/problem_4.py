@@ -12,12 +12,12 @@ def sort_012(input_list):
             return "Invalid argument"
 
         if i not in aux_dict:
-            aux_dict[i] = []
-        aux_dict[i].append(i)
+            aux_dict[i] = 0
+        aux_dict[i] += 1
     
-    return (aux_dict[0] if 0 in aux_dict else []) + \
-        (aux_dict[1] if 1 in aux_dict else []) + \
-        (aux_dict[2] if 2 in aux_dict else [])
+    return ([0] * aux_dict[0] if 0 in aux_dict else []) + \
+        ([1] * aux_dict[1] if 1 in aux_dict else []) + \
+        ([2] * aux_dict[2] if 2 in aux_dict else [])
 
 def test_function(test_case):
     sorted_array = sort_012(test_case)
@@ -40,6 +40,8 @@ test_function([2, 1, 0, 3]) # returns a message of invalid argument and fails th
 
 # Test case 3
 
+test_function([0]) # returns a array with only 0
+test_function([1]) # returns a array with only 1
 test_function([0, 0, 0, 0, 0, 0]) # returns a array with only 0
 test_function([0, 0, 1, 0, 1, 1]) # returns a sorted array with only 0 and 1
 

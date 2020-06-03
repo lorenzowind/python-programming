@@ -16,8 +16,12 @@
 
 ### Method `suffixes` (TrieNode)
 
-#### Time complexity: O(n)
-#### Space complexity: O(n)
+#### Time complexity: O(m*n)
+- `m` is the number of children per Trie node
+- `n` is the depth of the Trie tree
+#### Space complexity: O(m*n)
+- `m` is the number of letters of the word
+- `n` is the number of words 
 
 ### Method `find` (Trie)
 
@@ -26,5 +30,5 @@
 
 ## Overrall
 
-### Time complexity: O(n)
-### Space complexity: O(n)
+### Time complexity: O(m*n)
+### Space complexity: O(m*n)

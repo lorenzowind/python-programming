@@ -1,4 +1,10 @@
-## Reasoning: To find the highest sums, I implemented the quicksort to be easier to discover the right digits. With the array sorted, the sums represent a pattern, taking only one element of a sequence of two numbers, decreasingly. 
+## Reasoning: To find the highest sums, I implemented the following logic:
+1. Searching with the quicksort to be easier to find the correct digits;
+    - Finding the pivot and calling the quicksort function recursively.
+2. With the array sorted, the sums represent a pattern:
+    - The length of the digits is the same if the number is even; otherwise, one of them has one more position;
+    - The highest sum is found taking the elements following: `last - 2n position`; 
+    - The second highest sum is similar: `last - (1 + 2n) position`.
 
 ### Method `rearrange_digits`
 

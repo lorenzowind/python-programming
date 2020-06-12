@@ -1,12 +1,6 @@
 from heapq import heappush, heappop
 
 def get_minimum_cost_of_connecting(num_islands, bridge_config):
-    """
-    :param: num_islands - number of islands
-    :param: bridge_config - bridge configuration as explained in the problem statement
-    return: cost (int) minimum cost of connecting all islands
-    TODO complete this method to returh minimum cost of connecting all islands
-    """
     graph = create_graph(num_islands, bridge_config)
     
     visited = [False for _ in range(len(graph) + 1)]

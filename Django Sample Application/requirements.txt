@@ -69,7 +69,7 @@ pytz==2016.7
 pywinpty==0.5.7
 pyzmq==19.0.0
 redis==3.5.3
-requests==2.11.1
+requests==2.20.0
 Send2Trash==1.5.0
 six==1.14.0
 snowballstemmer==2.0.0

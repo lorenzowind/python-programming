@@ -126,7 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
+"""
 # Cache
 CACHE_TTL = 60 * 5
 
@@ -140,3 +140,4 @@ CACHES = {
         "KEY_PREFIX": "CODE_NATION"
     }
 }
+"""

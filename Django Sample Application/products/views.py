@@ -7,7 +7,7 @@ from products.forms import ProductModelForm
 
 # Create your views here.
 
-@cache_page(25)
+# @cache_page(25)
 def list_products(request):
     products = Product.objects.all()
 

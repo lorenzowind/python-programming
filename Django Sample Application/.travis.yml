@@ -1,12 +1,23 @@
 language: python
 python:
- - "3.8.2"
+  - "3.8.2"
 
 stages:
- - name: 'test'
+  - name: test
+  - name: deploy
 
 jobs:
-   include:
-     - stage: test
-       name: Unit Tests
-       script: python manage.py test
+  include:
+    - stage: test
+      name: Unit Tests
+      script: python manage.py test
+    - stage: deploy
+      name: Heroku Deploy
+      script: /bin/true
+      deploy:
+        provider: heroku
+        api_key:
+          secure: H6QqLtatDst1tL6D/5ov/PmHHlsOiyN6q9Kdz+FkAIwhmx/GNNsUctseeAYtkFNlMqiB+sMWq8PX5PKN+b8YQF3siGLq8LbgU8gYIL+1Xlnw5ALkLSN/DNi6lJ2ls1plSmeICxRSitATZHcHbdVYnLKz7CkJz88NQvd5vfCq3bwU5e+mixMUZRKQPELPs/5MZeMeYIZWD/JzC2cbHz40NNXLWMg6SUFuD5QxYUU+BaA1Kp6tDniDFQ0ZDeSFymqBnl1SowaXIt2vteVyCByL/9ZrhFsIF0dy38vbovBtjljz6dZsE/Dm5c35cv9N3US9OkKudEEiH15ChbgB5zXl/CfcqTRQnoj16ISA4LLFZkqIX0p/Mg8bIrzl/U+d4Cb0hnbUrbN5Fc8lWENqT276faR5dkWjqoSu0gAyXKswDw/Zhp9i8d8Er2ZJ9vWaXEbK9sQIa3mOxuDzqOjEjTIzB6WYJRueVhW6tGE1E+6bZBdnha2XmM3aMipuEZsG72qDJYkeaMV9j+ABTWpGfL3uHrfC5QHylATsnIsq0gC/dnsYB4CMxilToSD8/81fZAXtESOS61Vl6Pl2pERPHs3PgVCqmW+XPTFuyglyqHi/GGOHmTkmrvtG516ulR53TDneWlSzsWhqz1z4VK4JQSsVDyNYXLmhpKfl/+FnTfFIBTs=
+        app: emr-acelera-ecomm
+        on: master
+        run: "python manage.py migrate"

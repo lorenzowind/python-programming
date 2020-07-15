@@ -1,11 +1,11 @@
 language: python
 python:
-  "3.8.2"
+ - "3.8.2"
 
 stages:
-  name: 'test'
+ - name: 'test'
 
 jobs:
-  stage: test
-  name: Unit Tests
-  script: python manage.py test
+ - stage: test
+ - name: Unit Tests
+ - script: python manage.py test

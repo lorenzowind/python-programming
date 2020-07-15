@@ -80,7 +80,8 @@ class Product(models.Model):
     category = models.ForeignKey(
         Category,
         on_delete=models.deletion.DO_NOTHING,
-        related_name='products'
+        related_name='products',
+        null=True
     )
 
     def __str__(self):
